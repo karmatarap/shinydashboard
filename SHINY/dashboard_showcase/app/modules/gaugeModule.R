@@ -30,6 +30,11 @@ gaugeModule <- function(input,output,session,title,gaugeData){
   ### Render gauges ----
   output$Gauge <- renderFrissC3Gauge({
     lstData <- gaugeData()
+    
+    lstData$color[lstData$color=="Other"] <- "ORANGE"
+    lstData$color[lstData$color=="Submission"] <- "RED"
+    lstData$color[lstData$color=="CSR"] <- "GREEN"
+    lstData$color[lstData$color=="DSUR/IDMC"] <- "BLACK"
     FrissC3Gauge(value = lstData$value, showMinMax = TRUE, color=lstData$color)
   })
 
