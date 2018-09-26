@@ -8,7 +8,7 @@ frontPanelModuleUI <- function(id){
 
   tagList(
 
-    h3("SPA Reporting Dashboard"),
+    h3("Time Reporting Dashboard"),
 
     fluidRow(
       column(3, uiOutput(ns("SelectResult"))),

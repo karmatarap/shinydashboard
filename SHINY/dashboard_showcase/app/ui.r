@@ -2,7 +2,7 @@ shinyUI(
 
   navbarPage(id="main", windowTitle = "Friss analytics", position = "fixed-top", title = NULL, header = FrissHeader,
 
-     tabPanel(title = "SPA Reporting Dashboard", value="Dashboard", icon = icon("dashboard"),
+     tabPanel(title ="Time Reporting Dashboard", value="Dashboard", icon = icon("dashboard"),
               addMessageBoxToPage(),
               frontPanelModuleUI("Dashboard")
      ),
